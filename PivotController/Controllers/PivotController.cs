@@ -17,7 +17,7 @@ namespace PivotController.Controllers
 
         public dynamic GetMySQLResult()
         {
-            MySqlConnection connection = new MySqlConnection("server=172.16.200.86;port=3306;user=root;database=test;password=coolcomp@123");
+            MySqlConnection connection = new MySqlConnection("<Enter your valid connection string here>");
             connection.Open();
             MySqlCommand command = new MySqlCommand("SELECT * FROM orders", connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
