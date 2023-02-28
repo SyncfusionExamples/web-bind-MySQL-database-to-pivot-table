@@ -22,7 +22,7 @@ Before beginning work on the server and client projects, ensure the following so
 npm install
 ```
 
-* Initialize the Pivot Table, map the hosted URL, prepare and a pivot report, and finally run your project using the following command to achieve the desired result.
+* Initialize the Pivot Table, map the hosted URL, create a pivot report, and finally run your project using the following command to achieve the desired result.
 
 ```sh
 npm run start

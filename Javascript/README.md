@@ -15,4 +15,4 @@ Before beginning work on the server and client projects, ensure the following so
 
 * To run this application, clone the [`how-to-bind-MySQL-database-to-pivot-table`](https://github.com/SyncfusionExamples/how-to-bind-MySQL-database-to-pivot-table) repository and then open **MyWebApp** project in Visual Studio 2022. Simply build and run your project in IIS Express, and it will host and display the URL `https://localhost:7146`.
 
-*  Now open JavaScript sample in Visual Studio Code and Initialize the Pivot Table, map the hosted URL, prepare and a pivot report, and finally, open the 'index.html' file in your browser to run your project.
+*  Now open the JavaScript sample in Visual Studio Code. Initialize the Pivot Table, map the hosted URL, create a pivot report, and finally, open the **index.html** file in your browser to run your project.
