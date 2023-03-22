@@ -1,6 +1,6 @@
 # How to bind MySQL database to a Pivot Table
 
-A quick start project for connecting a MySQL database to a Syncfusion Pivot Table. This repository includes a Web API Controller (MyWebApp) for retrieving data from a MySQL database, as well as a quick start sample in the TypeScript platform that displays the retrieved data in a Syncfusion Pivot Table.
+A quick start project for connecting a MySQL database to a Syncfusion Pivot Table. This repository includes a Web API Controller ([MyWebService](../MyWebService/)) for retrieving data from a MySQL database, as well as a quick start sample in the TypeScript platform that displays the retrieved data in a Syncfusion Pivot Table.
 
 ## Project prerequisites
 
@@ -14,9 +14,9 @@ Before beginning work on the server and client projects, ensure the following so
 
 ## How to run this application?
 
-* To run this application, clone the [`how-to-bind-MySQL-database-to-pivot-table`](https://github.com/SyncfusionExamples/how-to-bind-MySQL-database-to-pivot-table) repository and then open **MyWebApp** project in Visual Studio 2022. Simply build and run your project in IIS Express, and it will host and display the URL `https://localhost:7146`.
+* To run this application, clone the [how-to-bind-MySQL-database-to-pivot-table](https://github.com/SyncfusionExamples/how-to-bind-MySQL-database-to-pivot-table) repository and then open **MyWebService** project in Visual Studio 2022. Simply build and run your project in IIS Express, and it will host and display the URL `https://localhost:7146`.
 
-*  Now open TypeScript sample in Visual Studio Code and and install the necessary npm packages using the following command.
+*  Now open TypeScript sample in Visual Studio Code and install the necessary npm packages using the following command.
 
 ```sh
 npm install

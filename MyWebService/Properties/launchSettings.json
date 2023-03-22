@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "MyWebApp": {
+    "MyWebService": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

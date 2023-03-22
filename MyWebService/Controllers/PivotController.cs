@@ -3,7 +3,7 @@ using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 using System.Data;
 
-namespace MyWebApp.Controllers
+namespace MyWebService.Controllers
 {
     [ApiController]
     [Route("[controller]")]
