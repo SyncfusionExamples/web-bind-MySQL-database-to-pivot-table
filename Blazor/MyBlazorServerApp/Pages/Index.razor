@@ -1,0 +1,57 @@
+﻿@page "/"
+@using Syncfusion.Blazor.PivotView
+@using MySql.Data.MySqlClient;
+@using Newtonsoft.Json;
+@using System.Data;
+@using Syncfusion.Blazor.Data;
+
+<SfPivotView TValue="OrderDetails" Width="800" Height="340">
+    <PivotViewDataSourceSettings TValue="OrderDetails" DataSource="@dataSource">
+        <PivotViewColumns>
+            <PivotViewColumn Name="ShipName"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="ShipCity"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Freight"></PivotViewValue>
+        </PivotViewValues>
+        </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code {
+    private List<OrderDetails> dataSource { get; set; }
+
+    protected override void OnInitialized()
+    {
+        MySqlConnection connection = new MySqlConnection("<Enter your valid connection string here>");
+        connection.Open();
+        MySqlCommand command = new MySqlCommand("SELECT * FROM orders", connection);
+        MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
+        DataTable dataTable = new DataTable();
+        dataAdapter.Fill(dataTable);
+        connection.Close();
+        dataSource = (from DataRow data in dataTable.Rows
+                       select new OrderDetails()
+                           {
+                               OrderID = Convert.ToInt32(data["OrderId"]),
+                               CustomerID = data["CustomerID"].ToString(),
+                               ShipCity = data["ShipCity"].ToString(),
+                               ShipName = data["ShipName"].ToString(),
+                               Freight = Convert.ToDouble(data["Freight"])
+                           }).ToList();
+
+    }
+
+    public class OrderDetails
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+        public double Freight { get; set; }
+        }
+   
+}
+
+
