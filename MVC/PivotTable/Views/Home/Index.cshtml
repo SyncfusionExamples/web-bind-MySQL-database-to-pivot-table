@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@Html.EJS().PivotView("PivotView").Height("300").DataSourceSettings(
+        dataSource => dataSource.Url("https://localhost:7146/Pivot"
+        ).ExpandAll(false).EnableSorting(true)
+    .Rows(rows =>
+    {
+        rows.Name("ShipCity").Add();;
+    }).Columns(columns =>
+    {
+        columns.Name("ShipName").Add();
+    }).Values(values =>
+    {
+        values.Name("Freight").Caption("Sum of Freight").Add();
+    })).ShowFieldList(true).Render()

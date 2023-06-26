@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<ejs-pivotview id="PivotView" height="300" showFieldList="true">
+    <e-datasourcesettings Url="https://localhost:7146/Pivot" expandAll="false" enableSorting="true" showFieldList="true">
+        <e-rows>
+            <e-field name="ShipCity"></e-field>
+        </e-rows>
+        <e-columns>
+            <e-field name="ShipName"></e-field>
+        </e-columns>
+        <e-values>
+            <e-field name="Freight" caption="Sum of Freight"></e-field>
+        </e-values>
+    </e-datasourcesettings>
+</ejs-pivotview>
